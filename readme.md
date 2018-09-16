@@ -75,7 +75,18 @@ Add following to the build.gradle in the root folder:
         maven { url "https://kotlin.bintray.com/kotlinx" }
     }
  }
- ```
+ 
+ allprojects {
+     repositories {
+         ...
+         maven { url "https://kotlin.bintray.com/kotlinx" }
+     }
+ }
+```
+And following to dependencies. Please, note, that kotlinx.serialization version is tightly coupled to kotlin version. eg, for 1.2.61 you need 0.6.1
+```
+classpath "org.jetbrains.kotlinx:kotlinx-gradle-serialization-plugin:0.6.1"
+```
 
 Apply plugin in the app/build.gradle file:
 ```
