@@ -147,4 +147,6 @@ process = () => {
 5. Type `process()` and press Enter
 
 Resulting Kotlin data class will be printed into the output.
-Copy it and put into your project
+Copy it and put into your project.
+
+You can use `@SerialName` kotlinx.serialization annotation to instruct parser which name to grab from Remote Config

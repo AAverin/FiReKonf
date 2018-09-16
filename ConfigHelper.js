@@ -29,10 +29,11 @@ process = () => {
         } else {
             fixedValue = `"${value}"`
         }
-        let result = [
-            `    //${description}\n`,
-            `    val ${name}: String = ${fixedValue}`
-        ]
+        let result = []
+        if (description) {
+            result.push(`    //${description}\n`)
+        }
+        result.push(`    val ${name}: String = ${fixedValue}`)
         if (index != names.length - 1) {
             result.push(",\n")
         }
