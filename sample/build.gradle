@@ -30,7 +30,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation project(':library')
+    implementation project(':firekonf')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin.core}"
     implementation 'com.android.support:appcompat-v7:28.0.0-rc02'
     testImplementation 'junit:junit:4.12'
