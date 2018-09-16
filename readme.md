@@ -66,3 +66,18 @@ Add the dependency
 ```
 implementation "com.github.aaverin:firekonf:1.0"
 ```
+
+Additionally, you will need to add [kotlinx.serialization](https://github.com/Kotlin/kotlinx.serialization) to the project.
+Add following to the build.gradle in the root folder:
+```
+ buildscript {
+    repositories {
+        maven { url "https://kotlin.bintray.com/kotlinx" }
+    }
+ }
+ ```
+
+Apply plugin in the app/build.gradle file:
+```
+apply plugin: 'kotlinx-serialization'
+```
