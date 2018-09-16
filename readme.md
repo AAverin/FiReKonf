@@ -22,22 +22,21 @@ Take a look:
  ```kotlin
  @Serializable
  data class TestKonf(
-         @SerialName("list_ads_frequency")
-         val myCustomParam: Int = 0,
-         val someTestParam: String = "default_value"
+     @SerialName("list_ads_frequency")
+     val myCustomParam: Int = 0,
+     val someTestParam: String = "default_value"
  ) 
  ```
  
  Then in your Application class add:
  ```kotlin
 override fun onCreate() {
-        super.onCreate()
+    super.onCreate()
 
-        val defaultsKonfig = TestKonf()
-        
-        fiReKonf.init(defaultsKonfig, FiReKonfOptions(isFirst = sharedPrefs.isFirst /*, forceUpdatePending = true*/))
-        sharedPrefs.isFirst = false
-    }
+    val defaultsKonfig = TestKonf()
+    
+    fiReKonf.init(defaultsKonfig, FiReKonfOptions(isFirst = sharedPrefs.isFirst /*, forceUpdatePending = true*/))
+}
 ```
 
 And later you can simply use the data by calling
@@ -47,6 +46,8 @@ val fetchedKonfig: TestKonf = fiReKonf.get(remoteConfig)
 ```
 
 Depending on current state of Remote Config, FiReConf will fill in data class, merging defaults with data from Remote Config
+
+You can see more detailed example in `sample` folder
 
 # Installation
 
