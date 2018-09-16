@@ -4,7 +4,11 @@ Firebase Remote Config is very easy and straightforward to implement.
 
 That is, until you find that you throttle the cloud and get random amounts of `FirebaseRemoteConfigFetchException` or `FirebaseRemoteConfigFetchThrottledException`.
 
-In this [YouTube video](https://www.youtube.com/watch?v=6TWJ_rR7K6g) Todd Kerpelman highlights several approaches
+In this YouTube video 
+
+[![Firebase Store Best Practices](http://img.youtube.com/vi/6TWJ_rR7K6g/0.jpg)](http://www.youtube.com/watch?v=6TWJ_rR7K6g) 
+
+Todd Kerpelman highlights several approaches
 on how to make sure users get latest data from Firebase Remote Config promptly.
 
 This library implements #3 approach:
@@ -96,6 +100,7 @@ apply plugin: 'kotlinx-serialization'
 # Extra
 
 A little javascript to build a Kotlin data class from Firebase Remote Config.
+[Source](ConfigHelper.js)
 
 ```
 process = () => {
