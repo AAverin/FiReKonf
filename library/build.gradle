@@ -3,7 +3,8 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlinx-serialization'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group: "com.github.aaverin.firekonf"
+group = 'com.github.aaverin.firekonf'
+version = '1.0'
 
 android {
     compileSdkVersion buildConfig.compileSdkVersion

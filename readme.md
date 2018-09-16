@@ -51,5 +51,18 @@ You can see more detailed example in `sample` folder
 
 # Installation
 
+[Install via Jitpack.io](https://jitpack.io/#AAverin/FiReKonf)
 
-
+Add it in your root build.gradle at the end of repositories:
+```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+Add the dependency
+```
+    implementation "com.github.aaverin:firekonf:1.0"
+```
