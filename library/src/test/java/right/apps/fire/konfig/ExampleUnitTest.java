@@ -1,8 +1,8 @@
-package right.apps.firekonfig;
+package right.apps.fire.konfig;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Example local unit test, which will execute on the development machine (host).

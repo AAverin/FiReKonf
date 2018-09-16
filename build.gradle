@@ -8,36 +8,40 @@ buildscript {
                 targetSdkVersion : 28,
         ]
         versions = [
-                kotlin             : [
-                        core      : "1.2.61",
-                        coroutines: "0.24.0"
+                kotlin       : [
+                        core         : "1.2.61",
+                        serialization: "0.6.1",
+                        coroutines   : "0.24.0"
                 ],
                 jetpack            : [
-                        core            : "1.0.0-rc01",
-                        appcompat       : "1.0.0-rc01",
+                        core            : "1.0.0-rc02",
+                        appcompat       : "1.0.0-rc02",
                         multidex        : "2.0.0",
-                        ktx             : "1.0.0-rc01"
+                        material        : "1.0.0-rc02",
+                        ktx             : "1.0.0-rc02"
                 ],
-                firebase           : [
-                        core    : "16.0.3",
-                        config  : "16.0.0"
+                firebase     : [
+                        core  : "16.0.3",
+                        config: "16.0.0"
                 ],
 
-                jUnit              : "4.12",
-                mockitoKotlin      : "1.5.0",
-                mockito            : "2+",
-                expekt             : "0.5.0"
+                jUnit        : "4.12",
+                mockitoKotlin: "1.5.0",
+                mockito      : "2+",
+                expekt       : "0.5.0"
         ]
     }
 
     repositories {
         google()
         jcenter()
+        maven { url "https://kotlin.bintray.com/kotlinx" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.4'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin.core}"
-        classpath 'com.google.gms:google-services:4.1.0' // google-services plugin
+        classpath "org.jetbrains.kotlinx:kotlinx-gradle-serialization-plugin:${versions.kotlin.serialization}"
+        classpath 'com.google.gms:google-services:4.1.0'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -48,6 +52,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "https://kotlin.bintray.com/kotlinx" }
     }
 }
 

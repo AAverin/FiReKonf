@@ -1,1 +1,1 @@
-include ':sample', ':firekonfig'
+include ':sample', ':library'

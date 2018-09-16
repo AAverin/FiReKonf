@@ -1,6 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
+apply plugin: 'kotlinx-serialization'
+
 android {
     compileSdkVersion buildConfig.compileSdkVersion
 
@@ -25,8 +27,12 @@ android {
 dependencies {
     api "com.google.firebase:firebase-core:${versions.firebase.core}"
     api "com.google.firebase:firebase-config:${versions.firebase.config}"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.kotlin.coroutines}"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin.core}"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:${versions.kotlin.core}"
+    api "org.jetbrains.kotlinx:kotlinx-serialization-runtime:${versions.kotlin.serialization}"
+
     testImplementation 'junit:junit:4.12'
 
 }
-
-apply plugin: 'com.google.gms.google-services'
