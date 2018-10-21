@@ -68,7 +68,7 @@ allprojects {
 ```
 Add the dependency
 ```
-implementation "com.github.aaverin:firekonf:1.0"
+implementation "com.github.aaverin:firekonf:1.1"
 ```
 
 Additionally, you will need to add [kotlinx.serialization](https://github.com/Kotlin/kotlinx.serialization) to the project.

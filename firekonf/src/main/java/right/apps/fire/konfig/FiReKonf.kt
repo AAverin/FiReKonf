@@ -1,6 +1,8 @@
 package right.apps.fire.konfig
 
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
+import kotlinx.coroutines.experimental.CoroutineExceptionHandler
+import kotlinx.coroutines.experimental.GlobalScope
 import kotlinx.coroutines.experimental.launch
 import kotlinx.serialization.Mapper
 import java.util.concurrent.TimeUnit
@@ -13,6 +15,10 @@ data class FiReKonfOptions(
 
 class FiReKonf(private val remoteConfig: FirebaseRemoteConfig) {
 
+    var exceptionHandler = CoroutineExceptionHandler { _, _ ->
+
+    }
+
     inline fun <reified T : Any> init(konfig: T, options: FiReKonfOptions = FiReKonfOptions()) {
         init(Mapper.map(konfig), options)
     }
@@ -23,7 +29,7 @@ class FiReKonf(private val remoteConfig: FirebaseRemoteConfig) {
             remoteConfig.activateFetched()
         }
 
-        launch {
+        GlobalScope.launch(exceptionHandler) {
             when {
                 //refresh ASAP and activate – eg, when force-update push was received
                 options.forceUpdatePending -> {
