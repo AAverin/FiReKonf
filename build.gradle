@@ -9,8 +9,8 @@ buildscript {
         ]
         versions = [
                 kotlin       : [
-                        core         : "1.2.70",
-                        serialization: "0.6.2",
+                        core         : "1.2.61",
+                        serialization: "0.6.1",
                         coroutines   : "0.30.2"
                 ],
                 jetpack            : [
