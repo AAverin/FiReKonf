@@ -1,3 +1,6 @@
+# FYI: Only works with Kotlin 1.2.X
+# Due to updates in kotlinx.serialization, library needs an update to Kotlin 1.3.X
+
 # FiReKonf – Firebase Remote Config, best practices and Kotlin support
 
 Firebase Remote Config is very easy and straightforward to implement. 
